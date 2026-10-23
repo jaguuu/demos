@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Floristería Estilflor · Floristeria a Balaguer</title>
+<meta name="description" content="Floristería Estilflor, florista i disseny floral al carrer de Barcelona, 46 de Balaguer. Rams, centres, corones, rams de núvia i plantes. Truca'ns al 973 44 76 80.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F4F1;
+  --surface:#FBFBF9;
+  --ink:#17181A;
+  --muted:#5F6163;
+  --line:#DADAD4;
+  --accent:#9B3D58;
+  --accent-deep:#7E2F46;
+  --on-accent:#F8F4F2;
+  --serif:"Gloock", Georgia, "Times New Roman", serif;
+  --sans:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gut:20px;
+  --space:clamp(72px, 10vw, 140px);
+  --maxw:1320px;
+  --r:2px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --photo:saturate(.92) contrast(1.03);
+}
+@media (min-width:768px){ :root{ --gut:clamp(32px, 5vw, 64px); } }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; accent-color:var(--accent); }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:1.0625rem; line-height:1.6;
+  -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent;
+  overflow-x:hidden;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom));
+}
+@media (min-width:768px){ body{ padding-bottom:0; } }
+::selection{ background:var(--accent); color:var(--on-accent); }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; text-underline-offset:.22em; text-decoration-thickness:1px; }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:var(--r); }
+h1,h2,h3{ font-family:var(--serif); font-weight:400; margin:0; text-wrap:balance; letter-spacing:-0.03em; line-height:1.04; }
+p{ margin:0; text-wrap:pretty; }
+.wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gut); }
+section[id]{ scroll-margin-top:84px; }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+/* Botons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.6em;
+  min-height:48px; padding:0 1.4em; white-space:nowrap;
+  background:var(--accent); color:var(--on-accent); border-radius:var(--r);
+  font:600 1rem/1 var(--sans); text-decoration:none; letter-spacing:.01em;
+  transition:background-color .2s ease, transform .16s ease;
+}
+.btn:active{ transform:scale(.97); }
+.btn svg{ width:18px; height:18px; flex:none; }
+.link{
+  display:inline-flex; align-items:center; gap:.5em; min-height:44px;
+  font-weight:500; text-decoration:underline; text-decoration-color:var(--line);
+  transition:text-decoration-color .2s ease, color .2s ease;
+}
+.link:active{ transform:scale(.97); }
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{ background:var(--accent-deep); }
+  .link:hover{ text-decoration-color:var(--accent); color:var(--accent); }
+}
+
+/* Capçalera */
+.top{ position:sticky; top:0; z-index:30; background:var(--paper); border-bottom:1px solid var(--line); }
+.top .wrap{ display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:68px; }
+.brand{ font-family:var(--serif); font-size:1.5rem; letter-spacing:-0.02em; text-decoration:none; white-space:nowrap; }
+.nav{ display:none; gap:28px; margin-left:auto; }
+.nav a{ text-decoration:none; font-size:.98rem; color:var(--muted); min-height:44px; display:inline-flex; align-items:center; transition:color .2s ease; }
+.top .btn{ min-height:44px; padding:0 1.1em; font-size:.95rem; }
+@media (min-width:900px){ .nav{ display:flex; } }
+@media (hover:hover) and (pointer:fine){ .nav a:hover{ color:var(--ink); } }
+
+/* Portada */
+.hero{ padding-top:clamp(28px, 5vw, 56px); }
+.hero .wrap{ display:grid; gap:24px; }
+.hero h1{ font-size:clamp(2.6rem, 6.4vw, 6rem); line-height:1.02; }
+.hero-media{ margin:0; overflow:hidden; aspect-ratio:4/5; background:#E6E5E0; }
+.hero-media img{ width:100%; height:100%; object-fit:cover; filter:var(--photo); }
+.hero-copy{ display:grid; gap:22px; max-width:34ch; }
+.hero-copy p{ color:var(--muted); }
+.actions{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; }
+.status{ font-size:.98rem; color:var(--ink); border-top:1px solid var(--line); padding-top:16px; font-variant-numeric:tabular-nums; }
+.status strong{ font-weight:600; }
+.caption{ font-family:var(--serif); font-size:1.05rem; color:var(--muted); letter-spacing:-0.01em; }
+@media (min-width:768px){
+  .hero .wrap{ grid-template-columns:repeat(12, 1fr); grid-template-rows:auto 1fr auto; column-gap:24px; row-gap:20px; }
+  .hero h1{ grid-column:1 / 10; grid-row:1; z-index:2; margin-top:clamp(24px, 6vh, 72px); }
+  .hero h1 .ink{ background:var(--paper); -webkit-box-decoration-break:clone; box-decoration-break:clone; padding:0 .14em .04em 0; }
+  .hero-media{ grid-column:5 / -1; grid-row:1 / 3; aspect-ratio:auto; height:min(76svh, 780px); min-height:460px; }
+  .hero-copy{ grid-column:1 / 5; grid-row:2; align-self:end; padding-bottom:4px; }
+  .caption{ grid-column:5 / -1; grid-row:3; }
+}
+
+/* Qui som */
+.about{ padding-block:var(--space); text-align:center; }
+.about h2{ font-size:clamp(2.2rem, 5vw, 4.5rem); max-width:16ch; margin-inline:auto; }
+.about p{ max-width:56ch; margin:28px auto 0; color:var(--muted); font-size:1.125rem; }
+
+/* Serveis */
+.services{ padding-bottom:var(--space); }
+.services h2, .orders h2, .shop h2, .gallery h2{ font-size:clamp(2rem, 4.2vw, 3.75rem); }
+.index{ list-style:none; margin:40px 0 0; padding:0; border-top:1px solid var(--ink); }
+.index li{ border-bottom:1px solid var(--line); }
+.row{ display:grid; gap:8px; padding:24px 0; text-decoration:none; }
+.row h3{ font-size:clamp(1.9rem, 3.6vw, 3.1rem); transition:color .25s ease; }
+.row p{ color:var(--muted); max-width:52ch; }
+.note{ margin-top:28px; color:var(--muted); max-width:60ch; }
+@media (min-width:768px){
+  .row{ grid-template-columns:5fr 6fr; align-items:baseline; gap:32px; padding:30px 0; }
+}
+@media (hover:hover) and (pointer:fine){ a.row:hover h3{ color:var(--accent); } }
+
+/* Bodes */
+.weddings{ background:var(--surface); padding-block:var(--space); }
+.weddings .wrap{ display:grid; gap:40px; }
+.weddings figure{ margin:0 calc(var(--gut) * -1); overflow:hidden; aspect-ratio:4/5; }
+.weddings figure img{ width:100%; height:100%; object-fit:cover; filter:var(--photo); transition:transform .7s var(--ease); }
+.weddings-copy{ display:grid; gap:24px; align-content:center; }
+.price{ font-family:var(--serif); font-size:clamp(4rem, 9vw, 6rem); line-height:.95; letter-spacing:-0.035em; font-variant-numeric:tabular-nums; }
+.price small{ display:block; font-family:var(--sans); font-size:1rem; letter-spacing:0; color:var(--muted); margin-bottom:10px; }
+.facts{ margin:0; padding:0; border-top:1px solid var(--line); }
+.facts div{ display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); }
+.facts dt{ font-weight:600; }
+.facts dd{ margin:0; color:var(--muted); text-align:right; }
+@media (min-width:768px){
+  .weddings .wrap{ grid-template-columns:repeat(12, 1fr); gap:24px; }
+  .weddings figure{ grid-column:1 / 7; margin:0 0 0 calc(var(--gut) * -1); aspect-ratio:4/5; }
+  .weddings-copy{ grid-column:8 / -1; }
+}
+@media (min-width:1320px){ .weddings figure{ margin-left:calc((100vw - var(--maxw)) / -2 - var(--gut)); } }
+
+/* Galeria */
+.gallery{ padding-block:var(--space); }
+.gallery-head{ display:grid; gap:12px; margin-bottom:36px; }
+.gallery-head p{ color:var(--muted); }
+.mosaic{ display:grid; gap:12px; grid-auto-flow:dense; }
+.mosaic figure{ margin:0; overflow:hidden; background:#E6E5E0; }
+.mosaic figure:nth-child(odd){ aspect-ratio:4/5; }
+.mosaic figure:nth-child(even){ aspect-ratio:3/2; }
+.mosaic img{ width:100%; height:100%; object-fit:cover; filter:var(--photo); transition:transform .7s var(--ease); }
+@media (min-width:768px){
+  .gallery-head{ grid-template-columns:1fr auto; align-items:end; }
+  .mosaic{ grid-template-columns:1.25fr 1fr 1fr; grid-auto-rows:clamp(200px, 23vw, 330px); grid-template-areas:"a b b" "a c d"; gap:16px; }
+  .mosaic figure:nth-child(n){ aspect-ratio:auto; }
+  .mosaic figure:nth-child(1){ grid-area:a; }
+  .mosaic figure:nth-child(2){ grid-area:b; }
+  .mosaic figure:nth-child(3){ grid-area:c; }
+  .mosaic figure:nth-child(4){ grid-area:d; }
+}
+@media (hover:hover) and (pointer:fine){
+  .mosaic figure:hover img, .weddings figure:hover img, .shop-photo:hover img{ transform:scale(1.04); }
+}
+
+/* Encàrrecs */
+.orders{ padding-bottom:var(--space); }
+.orders .wrap{ display:grid; gap:36px; }
+.orders-intro{ display:grid; gap:20px; align-content:start; }
+.orders-intro p{ color:var(--muted); max-width:44ch; }
+.ways{ list-style:none; margin:0; padding:0; border-top:1px solid var(--ink); }
+.ways li{ border-bottom:1px solid var(--line); }
+.way{ display:grid; grid-template-columns:1fr auto; align-items:center; gap:4px 16px; padding:22px 0; text-decoration:none; min-height:44px; }
+.way span{ color:var(--muted); font-size:.98rem; }
+.way strong{ grid-column:1; font-family:var(--serif); font-weight:400; font-size:clamp(1.6rem, 3vw, 2.4rem); letter-spacing:-0.02em; line-height:1.1; font-variant-numeric:tabular-nums; transition:color .25s ease; }
+.way svg{ grid-column:2; grid-row:1 / 3; width:22px; height:22px; color:var(--muted); transition:transform .3s var(--ease), color .25s ease; }
+.small-notes{ display:grid; gap:10px; margin:24px 0 0; padding:0; list-style:none; color:var(--muted); font-size:1rem; }
+@media (min-width:768px){
+  .orders .wrap{ grid-template-columns:5fr 7fr; gap:64px; }
+}
+@media (hover:hover) and (pointer:fine){
+  .way:hover strong{ color:var(--accent); }
+  .way:hover svg{ transform:translateX(4px); color:var(--accent); }
+}
+
+/* Botiga */
+.shop{ padding-bottom:var(--space); }
+.shop-photo{ margin:0 0 48px; overflow:hidden; aspect-ratio:4/3; background:#E6E5E0; }
+.shop-photo img{ width:100%; height:100%; object-fit:cover; filter:var(--photo); transition:transform .7s var(--ease); }
+.shop-grid{ display:grid; gap:40px; }
+.shop-info{ display:grid; gap:28px; align-content:start; }
+.shop-info address{ font-style:normal; font-size:1.125rem; }
+.hours{ list-style:none; margin:0; padding:0; border-top:1px solid var(--ink); font-variant-numeric:tabular-nums; }
+.hours li{ display:flex; justify-content:space-between; gap:16px; padding:11px 0; border-bottom:1px solid var(--line); }
+.hours li span:first-child::first-letter{ text-transform:uppercase; }
+.hours li span:last-child{ color:var(--muted); text-align:right; }
+.hours li.is-today{ font-weight:600; }
+.hours li.is-today span{ color:var(--accent); }
+.shop-status{ font-variant-numeric:tabular-nums; }
+.map{ width:100%; aspect-ratio:4/3; border:0; background:#E6E5E0; filter:grayscale(.35); border-radius:var(--r); }
+@media (min-width:768px){
+  .shop-photo{ aspect-ratio:21/9; }
+  .shop-grid{ grid-template-columns:5fr 7fr; gap:64px; }
+  .map{ aspect-ratio:auto; height:100%; min-height:420px; }
+}
+
+/* Peu */
+.foot{ border-top:1px solid var(--line); padding-top:clamp(48px, 7vw, 96px); padding-bottom:32px; overflow:hidden; }
+.foot-row{ display:grid; gap:20px; color:var(--muted); font-size:1rem; }
+.foot-row a{ color:var(--ink); }
+.foot-links{ display:flex; flex-wrap:wrap; gap:4px 24px; }
+.foot-links a{ min-height:44px; display:inline-flex; align-items:center; }
+.wordmark{ font-family:var(--serif); font-size:clamp(4rem, 16.4vw, 15.5rem); line-height:.82; letter-spacing:-0.04em; margin:clamp(40px, 6vw, 72px) 0 28px; white-space:nowrap; color:var(--ink); }
+#credits-fotos{ font-size:.875rem; color:var(--muted); }
+@media (min-width:768px){ .foot-row{ grid-template-columns:1fr 1fr auto; align-items:start; } }
+
+/* Botó fix de mòbil */
+.callbar{
+  position:fixed; left:0; right:0; bottom:0; z-index:40;
+  padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));
+  background:var(--paper); border-top:1px solid var(--line);
+}
+.callbar .btn{ width:100%; min-height:52px; }
+@media (min-width:768px){ .callbar{ display:none; } }
+
+/* Moviment */
+@keyframes rise{ from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:none; } }
+@keyframes unveil{ from{ clip-path:inset(0 0 100% 0); transform:scale(1.06); } to{ clip-path:inset(0 0 0 0); transform:scale(1); } }
+.js .hero .rise{ animation:rise .8s var(--ease) both; animation-delay:calc(var(--i, 0) * 80ms + 120ms); }
+.js .hero-media img{ animation:unveil 1.3s var(--ease) both; }
+.js [data-reveal]{ opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.js [data-reveal="fade"]{ transform:none; }
+.js [data-reveal="clip"]{ opacity:1; transform:none; clip-path:inset(12% 0 0 0); transition:clip-path .8s var(--ease); }
+.js [data-reveal].is-in{ opacity:1; transform:none; clip-path:inset(0 0 0 0); }
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline: view()){
+    .wordmark{ animation:lift linear both; animation-timeline:view(); animation-range:entry 0% cover 35%; }
+    @keyframes lift{ from{ transform:translateY(22%); opacity:.25; } to{ transform:none; opacity:1; } }
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation:none !important; transition:none !important; }
+  .js [data-reveal]{ opacity:1; transform:none; clip-path:none; }
+}
+</style>
+</head>
+<body>
+<div class="jd-demo" role="note"><style>.jd-demo{position:relative;z-index:2147483000;background:#141414;color:#ededed;font:500 12.5px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:8px 16px;padding-top:calc(8px + env(safe-area-inset-top,0px))}.jd-demo a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}</style>Proposta de web creada per Jaume per a Floristería Estilflor. No és la web oficial del negoci. <a href="mailto:demojaume@gmail.com">Contacte</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inici" aria-label="Estilflor, inici">Estilflor</a>
+    <nav class="nav" aria-label="Seccions">
+      <a href="#que-fem">Què fem</a>
+      <a href="#bodes">Bodes</a>
+      <a href="#encarrecs">Encàrrecs</a>
+      <a href="#botiga">La botiga</a>
+    </nav>
+    <a class="btn" href="tel:+34973447680">Truca'ns</a>
+  </div>
+</header>
+
+<main id="inici">
+
+  <section class="hero" aria-labelledby="titol">
+    <div class="wrap">
+      <h1 id="titol" class="rise" style="--i:0"><span class="ink">Rams, centres i corones, fets a Balaguer.</span></h1>
+      <figure class="hero-media">
+        <img data-slot="hero" fetchpriority="high"
+          src="https://images.unsplash.com/photo-1782038522371-a9c8455d6c3b?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Mnx8ZmxvcmlzdCUyMGhhbmRzJTIwYXJyYW5naW5nJTIwYm91cXVldHxlbnwxfDB8fHwxNzkyNzc2OTU5fDA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+          width="3639" height="2439"
+          alt="Una mà sosté una pivonia blanca enmig d'un munt de flors rosades">
+      </figure>
+      <div class="hero-copy">
+        <p class="rise" style="--i:1">Som florista i disseny floral al carrer de Barcelona. Ens dieu l'ocasió i triem les flors amb vosaltres.</p>
+        <div class="actions rise" style="--i:2">
+          <a class="btn" href="tel:+34973447680">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Truca'ns
+          </a>
+          <a class="link" href="https://wa.me/34669414761" target="_blank" rel="noopener">Escriu-nos per WhatsApp</a>
+        </div>
+        <p class="status rise" style="--i:3" data-status>Dilluns a divendres, 10:00 - 13:00 i 17:30 - 20:00. Dissabte, 10:00 - 13:00.</p>
+      </div>
+      <p class="caption rise" style="--i:4">Flor de temporada, al carrer de Barcelona, 46.</p>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="lema">
+    <div class="wrap" data-reveal="fade">
+      <h2 id="lema">Ficant flors i plantes a la vostra vida.</h2>
+      <p>És el nostre lema i és com treballem: rams per a un aniversari, centres per a la taula, plantes per a casa i corones per acomiadar algú. A Google ens valoren amb un 4,9 sobre 5, en 39 ressenyes.</p>
+    </div>
+  </section>
+
+  <section class="services" id="que-fem" aria-labelledby="t-serveis">
+    <div class="wrap">
+      <h2 id="t-serveis" data-reveal>Què us podem preparar</h2>
+      <ul class="index">
+        <li data-reveal><div class="row"><h3>Rams</h3><p>Per a un aniversari, un naixement o per dir gràcies. Amb flor de temporada i el to que ens demaneu.</p></div></li>
+        <li data-reveal><div class="row"><h3>Centres</h3><p>Per a la taula d'una celebració o d'un dinar de família, pensats per al lloc on aniran.</p></div></li>
+        <li data-reveal><div class="row"><h3>Corones i comiats</h3><p>Corones, rams i centres per a un funeral. Amb un to sobri i el tracte que el moment demana.</p></div></li>
+        <li data-reveal><a class="row" href="#bodes"><h3>Rams de núvia</h3><p>El ram i les flors de la cerimònia. Ho parlem amb calma i us assessorem sense recàrrec.</p></a></li>
+        <li data-reveal><div class="row"><h3>Plantes</h3><p>Plantes per a casa o per regalar, amb consells perquè us durin.</p></div></li>
+      </ul>
+      <p class="note" data-reveal="fade">Colors, mida i flors: tot es pot triar. Expliqueu-nos-ho quan ens truqueu o passeu per la botiga.</p>
+    </div>
+  </section>
+
+  <section class="weddings" id="bodes" aria-labelledby="t-bodes">
+    <div class="wrap">
+      <figure data-reveal="clip">
+        <img loading="lazy" decoding="async"
+          src="https://images.unsplash.com/photo-1495610015663-83e7e5246070?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8M3x8YnJpZGFsJTIwYm91cXVldCUyMHBhc3RlbCUyMHJvc2VzfGVufDF8MHx8fDE3OTI3NzczNzR8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+          width="6144" height="4096"
+          alt="Una núvia sosté un ram de flors blanques i rosades">
+      </figure>
+      <div class="weddings-copy" data-reveal>
+        <h2 id="t-bodes">Flors per al vostre casament</h2>
+        <p class="price"><small>Flors per a bodes, des de</small>90 €</p>
+        <p>Ens trobem, ens expliqueu com us imagineu el dia i us proposem flors per al ram i per a la cerimònia.</p>
+        <dl class="facts">
+          <div><dt>Assessorament</dt><dd>Sense recàrrec</dd></div>
+          <div><dt>Ram de núvia</dt><dd>Sí</dd></div>
+          <div><dt>Desplaçament</dt><dd>Segons els quilòmetres</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn" href="tel:+34973447680">Truca'ns</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-labelledby="t-galeria">
+    <div class="wrap">
+      <div class="gallery-head" data-reveal>
+        <h2 id="t-galeria">Flors de temporada</h2>
+        <p>En trobareu més fotos a <a class="link" href="https://www.instagram.com/floristeria_estilflor/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+      <div class="mosaic">
+        <figure data-reveal="fade">
+          <img data-slot="galeria" loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1554196259-e3c00b41a421?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NHx8ZmxvcmlzdCUyMGhhbmRzJTIwYXJyYW5naW5nJTIwYm91cXVldHxlbnwxfDB8fHwxNzkyNzc2OTU5fDA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            width="3600" height="2403"
+            alt="Una florista compon un ram amb flors de diversos colors">
+        </figure>
+        <figure data-reveal="fade">
+          <img data-slot="galeria" loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1571086803179-00ab0eaa6e02?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Nnx8YnJpZGFsJTIwYm91cXVldCUyMHBhc3RlbCUyMHJvc2VzfGVufDF8MHx8fDE3OTI3NzczNzR8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            width="3680" height="2453"
+            alt="Ram de roses blanques, taronges i rosades">
+        </figure>
+        <figure data-reveal="fade">
+          <img data-slot="galeria" loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1628927122320-910a679f54b5?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8MXx8ZmxvcmlzdCUyMGhhbmRzJTIwYXJyYW5naW5nJTIwYm91cXVldHxlbnwxfDB8fHwxNzkyNzc2OTU5fDA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            width="6181" height="4121"
+            alt="Unes mans sostenen un ram de flors blaves i blanques">
+        </figure>
+        <figure data-reveal="fade">
+          <img data-slot="galeria" loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1782061932456-acbc6cf6e08a?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Mnx8Zmxvd2VyJTIwc2hvcCUyMGludGVyaW9yJTIwbmF0dXJhbCUyMGxpZ2h0fGVufDF8MHx8fDE3OTI3NzY5NjB8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            width="5464" height="3862"
+            alt="Flors rosades i blanques en testos rústics a l'ampit d'una finestra">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="orders" id="encarrecs" aria-labelledby="t-encarrecs">
+    <div class="wrap">
+      <div class="orders-intro" data-reveal>
+        <h2 id="t-encarrecs">Com fer-nos un encàrrec</h2>
+        <p>Truqueu, escriviu o passeu per la botiga. Ens dieu per a qui és i per a quan, i us aconsellem.</p>
+        <ul class="small-notes">
+          <li>Per Sant Jordi, Tots Sants o un casament, val la pena avisar amb temps.</li>
+          <li>Podeu pagar amb targeta.</li>
+          <li>No fem enviaments a la resta de l'Estat.</li>
+        </ul>
+      </div>
+      <ul class="ways" data-reveal>
+        <li>
+          <a class="way" href="tel:+34973447680">
+            <span>Per telèfon</span>
+            <strong>973 44 76 80</strong>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="way" href="https://wa.me/34669414761" target="_blank" rel="noopener">
+            <span>Per WhatsApp</span>
+            <strong>669 41 47 61</strong>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="way" href="https://maps.google.com/?cid=8082863484514750478" target="_blank" rel="noopener">
+            <span>A la botiga</span>
+            <strong>Carrer de Barcelona, 46</strong>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="shop" id="botiga" aria-labelledby="t-botiga">
+    <div class="wrap">
+      <figure class="shop-photo" data-reveal="clip">
+        <img loading="lazy" decoding="async"
+          src="https://images.unsplash.com/photo-1771856558087-80f35365c3bb?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Nnx8Zmxvd2VyJTIwc2hvcCUyMGludGVyaW9yJTIwbmF0dXJhbCUyMGxpZ2h0fGVufDF8MHx8fDE3OTI3NzY5NjB8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+          width="6240" height="4160"
+          alt="Flors fresques de molts colors exposades dins d'una floristeria">
+      </figure>
+      <div class="shop-grid">
+        <div class="shop-info" data-reveal>
+          <h2 id="t-botiga">Us esperem a la botiga</h2>
+          <address>Carrer de Barcelona, 46<br>25600 Balaguer</address>
+          <p class="shop-status" data-status-shop>Obrim de dilluns a dissabte.</p>
+          <ul class="hours" aria-label="Horari">
+            <li data-day="1"><span>dilluns</span><span>10:00 - 13:00 i 17:30 - 20:00</span></li>
+            <li data-day="2"><span>dimarts</span><span>10:00 - 13:00 i 17:30 - 20:00</span></li>
+            <li data-day="3"><span>dimecres</span><span>10:00 - 13:00 i 17:30 - 20:00</span></li>
+            <li data-day="4"><span>dijous</span><span>10:00 - 13:00 i 17:30 - 20:00</span></li>
+            <li data-day="5"><span>divendres</span><span>10:00 - 13:00 i 17:30 - 20:00</span></li>
+            <li data-day="6"><span>dissabte</span><span>10:00 - 13:00</span></li>
+            <li data-day="0"><span>diumenge</span><span>Tancat</span></li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="tel:+34973447680">Truca'ns</a>
+            <a class="link" href="https://maps.google.com/?cid=8082863484514750478" target="_blank" rel="noopener">Com arribar-hi</a>
+          </div>
+        </div>
+        <iframe class="map" data-reveal="fade"
+          src="https://www.google.com/maps?q=Florister%C3%ADa%20Estilflor%2C%20Carrer%20de%20Barcelona%2C%2046%2C%2025600%20Balaguer%2C%20L%C3%A9rida&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Floristería Estilflor al carrer de Barcelona, 46, Balaguer"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>Floristería Estilflor<br>Carrer de Barcelona, 46, 25600 Balaguer</p>
+      <p><a href="tel:+34973447680">973 44 76 80</a><br><a href="https://wa.me/34669414761" target="_blank" rel="noopener">669 41 47 61</a></p>
+      <div class="foot-links">
+        <a href="https://www.instagram.com/floristeria_estilflor/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/FloristeriaEstilflor/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="wordmark" aria-hidden="true">Estilflor</p>
+    <p id="credits-fotos">Fotografies de <a href="https://unsplash.com/@vlmrv?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Volodymyr Lymariev</a>, <a href="https://unsplash.com/@orionguyen?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Orio Nguyen</a>, <a href="https://unsplash.com/@artsyvibes?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Artsy Vibes</a>, <a href="https://unsplash.com/@marinasirosh?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Maryna Vladymyrska</a>, <a href="https://unsplash.com/@micheile?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">micheile henderson</a>, <a href="https://unsplash.com/@ladydi1180?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Diana Shchurova</a> i <a href="https://unsplash.com/@hhj8861?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Hazel J</a> a <a href="https://unsplash.com/?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+34973447680">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Truca'ns
+  </a>
+</div>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  root.classList.add('js');
+
+  /* Horari en minuts: índex 0 = diumenge */
+  var H = {
+    0: [],
+    1: [[600,780],[1050,1200]],
+    2: [[600,780],[1050,1200]],
+    3: [[600,780],[1050,1200]],
+    4: [[600,780],[1050,1200]],
+    5: [[600,780],[1050,1200]],
+    6: [[600,780]]
+  };
+  var NOMS = ['diumenge','dilluns','dimarts','dimecres','dijous','divendres','dissabte'];
+
+  function ara(){
+    var d = new Date();
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {timeZone:'Europe/Madrid', weekday:'short', hour:'2-digit', minute:'2-digit', hour12:false}).formatToParts(d);
+      var o = {};
+      parts.forEach(function(p){ o[p.type] = p.value; });
+      var dies = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+      var h = parseInt(o.hour, 10) % 24;
+      return { dia: dies[o.weekday], min: h * 60 + parseInt(o.minute, 10) };
+    } catch (e) {
+      return { dia: d.getDay(), min: d.getHours() * 60 + d.getMinutes() };
+    }
+  }
+  function hora(m){
+    var h = Math.floor(m / 60), mm = m % 60;
+    return h + ':' + (mm < 10 ? '0' : '') + mm;
+  }
+
+  function estat(){
+    var t = ara(), avui = H[t.dia], i;
+    for (i = 0; i < avui.length; i++) {
+      if (t.min >= avui[i][0] && t.min < avui[i][1]) {
+        return { obert:true, text:'Obert ara. Tanquem a les ' + hora(avui[i][1]) + '.' };
+      }
+    }
+    for (i = 0; i < avui.length; i++) {
+      if (t.min < avui[i][0]) {
+        return { obert:false, text:'Ara està tancat. Obrim avui a les ' + hora(avui[i][0]) + '.' };
+      }
+    }
+    for (var k = 1; k <= 7; k++) {
+      var d = (t.dia + k) % 7;
+      if (H[d].length) {
+        var quan = k === 1 ? 'demà' : NOMS[d];
+        return { obert:false, text:'Ara està tancat. Obrim ' + quan + ' a les ' + hora(H[d][0][0]) + '.' };
+      }
+    }
+    return null;
+  }
+
+  try {
+    var e = estat(), t = ara();
+    if (e) {
+      var hero = document.querySelector('[data-status]');
+      if (hero) {
+        hero.textContent = '';
+        var s = document.createElement('strong');
+        s.textContent = e.obert ? 'Obert ara. ' : 'Tancat ara. ';
+        hero.appendChild(s);
+        hero.appendChild(document.createTextNode(e.text.replace(/^(Obert ara\. |Ara està tancat\. )/, '')));
+      }
+      var shop = document.querySelector('[data-status-shop]');
+      if (shop) shop.textContent = e.text;
+    }
+    var fila = document.querySelector('.hours li[data-day="' + t.dia + '"]');
+    if (fila) {
+      fila.classList.add('is-today');
+      fila.setAttribute('aria-current', 'date');
+      fila.firstElementChild.textContent = 'Avui, ' + NOMS[t.dia];
+    }
+  } catch (err) {}
+
+  /* Aparicions en fer scroll, una sola vegada */
+  var els = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) {
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin:'0px 0px -8% 0px', threshold:0.12 });
+  els.forEach(function(el, i){
+    if (el.closest('.index') || el.closest('.mosaic')) {
+      el.style.transitionDelay = ((i % 4) * 70) + 'ms';
+    }
+    io.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
