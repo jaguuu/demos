@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Forn Codina El Pont De Suert | Forn de pa a El Pont de Suert</title>
+<meta name="description" content="Forn Codina al Pont de Suert: pa de forn de sòl de pedra des de 1932, pans de farina ecològica i coques. Obert de dimarts a diumenge, de 8:30 a 14:00.">
+<meta name="theme-color" content="#14120F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14120F;
+  --surface:#1D1A16;
+  --surface-2:#25211C;
+  --text:#EDE8DE;
+  --muted:#A9A296;
+  --line:rgba(237,232,222,.14);
+  --dots:rgba(237,232,222,.32);
+  --accent:#C8883A;
+  --accent-hi:#D89C52;
+  --on-accent:#14120F;
+  --r:4px;
+  --serif:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --space:clamp(72px, 10vw, 140px);
+  --gutter:20px;
+  --max:1200px;
+  --header:64px;
+  --photo:saturate(.92) contrast(1.03);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;accent-color:var(--accent);scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:var(--on-accent)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-0.02em}
+p{margin:0;text-wrap:pretty}
+section[id]{scroll-margin-top:calc(var(--header) + 16px)}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:var(--space)}
+.h2{font-size:clamp(2.1rem, 1.4rem + 3vw, 3.6rem);line-height:1.05}
+.lede{color:var(--muted);max-width:60ch;margin-top:1rem}
+
+/* Botons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:48px;padding:0 1.35rem;border-radius:var(--r);border:0;
+  background:var(--accent);color:var(--on-accent);
+  font:600 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:transform 160ms var(--ease), background-color 200ms ease;
+}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--sm{min-height:44px;padding:0 1rem}
+.link{
+  display:inline-flex;align-items:center;min-height:44px;color:var(--text);
+  text-decoration:underline;text-decoration-color:var(--dots);font-weight:500;white-space:nowrap;
+  transition:text-decoration-color 200ms ease, color 200ms ease;
+}
+.icon{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* Capçalera */
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:var(--header)}
+.brand{font-family:var(--serif);font-size:1.45rem;text-decoration:none;letter-spacing:-0.01em;white-space:nowrap}
+.nav-links{display:none;list-style:none;margin:0 0 0 auto;padding:0;gap:1.75rem}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--muted);font-weight:500;transition:color 200ms ease}
+
+/* Hero */
+.hero{position:relative;min-height:88svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:var(--photo);animation:heroImg 1.6s var(--ease) both}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top, rgba(20,18,15,.96) 0%, rgba(20,18,15,.78) 38%, rgba(20,18,15,.32) 72%, rgba(20,18,15,.45) 100%);
+}
+.hero-content{padding-top:120px;padding-bottom:clamp(40px, 7vw, 96px)}
+.hero h1{font-size:clamp(2.6rem, 1.5rem + 5vw, 5.6rem);line-height:1.02;max-width:13ch}
+.hero-text{margin-top:1.25rem;max-width:44ch;color:#D9D3C7;font-size:1.125rem}
+.status{margin-top:1.25rem;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.status .open{color:var(--accent)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;margin-top:1.75rem}
+.rating{margin-top:2rem;color:#C9C2B6;font-size:1rem}
+.rise{animation:rise 820ms var(--ease) both;animation-delay:calc(var(--i, 0) * 80ms + 250ms)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes heroImg{from{transform:scale(1.06)}to{transform:scale(1)}}
+
+/* Carta */
+.menu{max-width:1000px;margin-inline:auto;border:1px solid var(--line);padding:8px;background:var(--surface)}
+.menu-inner{border:1px solid var(--line);padding:clamp(32px, 6vw, 72px) clamp(20px, 5vw, 64px)}
+.menu-head{text-align:center;max-width:46ch;margin:0 auto}
+.menu-head .h2{font-size:clamp(2.3rem, 1.5rem + 3.4vw, 4rem)}
+.menu-head p{color:var(--muted);margin-top:.9rem}
+.menu-cols{display:grid;gap:3rem;margin-top:clamp(40px, 6vw, 64px)}
+.menu-group h3{font-style:italic;font-size:1.6rem;padding-bottom:.6rem;border-bottom:1px solid var(--line);margin-bottom:1.25rem}
+.menu-list{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem}
+.item-row{display:flex;align-items:baseline;gap:.6rem}
+.item-name{font-family:var(--serif);font-size:1.35rem;line-height:1.2}
+.leader{flex:1;min-width:1.5rem;border-bottom:1px dotted var(--dots);transform:translateY(-.28em)}
+.item-tag{font-family:var(--serif);font-style:italic;color:var(--muted);white-space:nowrap}
+.item-desc{color:var(--muted);margin-top:.3rem;max-width:44ch}
+.award{margin-top:clamp(40px, 6vw, 64px);padding-block:1.4rem;border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);text-align:center}
+.award strong{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem, 1.1rem + 1.2vw, 2rem);line-height:1.15}
+.award span{display:block;color:var(--muted);margin-top:.35rem}
+
+/* Tira de fotos */
+.strip-head{display:grid;gap:1rem;margin-bottom:clamp(28px, 4vw, 48px)}
+.strip-head p{color:var(--muted);max-width:52ch}
+.strip{
+  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;
+  padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);padding-bottom:14px;
+  scrollbar-width:thin;scrollbar-color:var(--surface-2) transparent;
+}
+.strip::after{content:"";flex:0 0 1px}
+.strip figure{margin:0;flex:0 0 clamp(250px, 30vw, 420px);aspect-ratio:4/5;overflow:hidden;border-radius:var(--r);scroll-snap-align:start;background:var(--surface)}
+.strip img{width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform 700ms var(--ease)}
+
+/* Història */
+.story{display:grid;gap:clamp(36px, 5vw, 72px);align-items:center}
+.story-text p{color:var(--muted);margin-top:1.1rem;max-width:58ch}
+.facts{margin:2.25rem 0 0;padding:0}
+.facts div{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;align-items:baseline;padding:1rem 0;border-top:1px solid var(--line)}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{font-family:var(--serif);font-size:1.7rem;line-height:1;font-variant-numeric:tabular-nums}
+.facts dd{margin:0;color:var(--muted)}
+.story-media{margin:0;overflow:hidden;border-radius:var(--r);aspect-ratio:4/5;background:var(--surface)}
+.story-media img{width:100%;height:100%;object-fit:cover;filter:var(--photo);transition:transform 700ms var(--ease)}
+
+/* Encàrrecs */
+.orders{background:var(--surface);border-block:1px solid var(--line)}
+.orders-main{text-align:center;max-width:780px;margin-inline:auto}
+.orders-main p{color:var(--muted);margin:1rem auto 0;max-width:50ch}
+.phone-big{
+  display:inline-block;margin-top:clamp(28px, 4vw, 44px);
+  font-family:var(--serif);font-size:clamp(2.7rem, 1.4rem + 7vw, 6rem);line-height:1;letter-spacing:-0.02em;
+  font-variant-numeric:tabular-nums;text-decoration:none;white-space:nowrap;
+  border-bottom:1px solid var(--line);padding-bottom:.12em;
+  transition:border-color 240ms ease, color 240ms ease;
+}
+.orders-main .btn{margin-top:2rem}
+.orders-cols{display:grid;gap:2rem;margin-top:clamp(56px, 7vw, 96px);border-top:1px solid var(--line);padding-top:2.25rem}
+.orders-cols h3{font-size:1.55rem;line-height:1.15}
+.orders-cols p{color:var(--muted);margin-top:.6rem;max-width:44ch}
+
+/* Horari */
+.visit{display:grid;gap:clamp(40px, 5vw, 72px)}
+.visit .status{margin-top:1rem}
+.hours{width:100%;border-collapse:collapse;margin-top:2rem;font-variant-numeric:tabular-nums}
+.hours caption{text-align:left;color:var(--muted);padding-bottom:.5rem}
+.hours th,.hours td{padding:.8rem 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.hours td{text-align:right;color:var(--text)}
+.hours th{color:var(--muted)}
+.hours tr.closed td{color:var(--muted)}
+.hours tr.is-today th,.hours tr.is-today td{color:var(--text);font-weight:600}
+.today-tag{color:var(--accent);font-weight:600;margin-left:.5rem}
+.address{font-style:normal;margin-top:2rem;line-height:1.55}
+.address strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.35rem;margin-bottom:.25rem}
+.address a{font-variant-numeric:tabular-nums}
+.visit-actions{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;margin-top:1.25rem}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:4/5}
+.map iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.75) contrast(1.02)}
+
+/* Peu */
+.site-footer{border-top:1px solid var(--line);padding-block:clamp(56px, 7vw, 88px) 40px}
+.footer-grid{display:grid;gap:2rem}
+.footer-name{font-family:var(--serif);font-size:clamp(2rem, 1.4rem + 2.6vw, 3.2rem);line-height:1;letter-spacing:-0.02em}
+.site-footer p{color:var(--muted);max-width:52ch}
+.site-footer p + p{margin-top:.5rem}
+#credits-fotos{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:1rem}
+#credits-fotos a{color:var(--text)}
+
+/* Barra de trucar mòbil */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--bg);border-top:1px solid var(--line);
+  padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+}
+.callbar .btn{width:100%;min-height:52px}
+
+/* Aparicions */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 720ms var(--ease), transform 720ms var(--ease)}
+.reveal.is-fade{transform:none}
+.reveal.in{opacity:1;transform:none}
+
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hi)}
+  .nav-links a:hover{color:var(--text)}
+  .link:hover{text-decoration-color:var(--accent)}
+  .phone-big:hover{border-color:var(--accent);color:var(--accent)}
+  .strip figure:hover img,.story-media:hover img{transform:scale(1.04)}
+  #credits-fotos a:hover{color:var(--accent)}
+}
+
+@media (min-width:768px){
+  :root{--gutter:40px}
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .nav-links{display:flex}
+  .menu-cols{grid-template-columns:1fr 1fr;gap:4rem}
+  .strip{padding-inline:max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));scroll-padding-inline:max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)))}
+  .strip-head{grid-template-columns:1fr 1fr;align-items:end;gap:3rem}
+  .orders-cols{grid-template-columns:1fr 1fr;gap:0}
+  .orders-cols > div:first-child{padding-right:2.5rem;border-right:1px solid var(--line)}
+  .orders-cols > div:last-child{padding-left:2.5rem}
+  .footer-grid{grid-template-columns:1.3fr 1fr;align-items:end}
+}
+@media (min-width:1024px){
+  .story{grid-template-columns:6fr 5fr}
+  .visit{grid-template-columns:5fr 6fr;align-items:start}
+  .map{aspect-ratio:auto;height:100%;min-height:560px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="jd-demo" role="note"><style>.jd-demo{position:relative;z-index:2147483000;background:#141414;color:#ededed;font:500 12.5px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:8px 16px;padding-top:calc(8px + env(safe-area-inset-top,0px))}.jd-demo a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}</style>Proposta de web creada per Jaume per a Forn Codina El Pont De Suert. No és la web oficial del negoci. <a href="mailto:demojaume@gmail.com">Contacte</a></div>
+
+<header class="site-header">
+  <nav class="wrap" aria-label="Principal">
+    <a class="brand" href="#inici">Forn Codina</a>
+    <ul class="nav-links">
+      <li><a href="#pa">El pa</a></li>
+      <li><a href="#historia">Història</a></li>
+      <li><a href="#encarrecs">Encàrrecs</a></li>
+      <li><a href="#horari">Horari</a></li>
+    </ul>
+    <a class="btn btn--sm" href="tel:+34973690259">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      Truca'ns
+    </a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inici" aria-labelledby="hero-title">
+    <div class="hero-media">
+      <img data-slot="hero" src="https://images.unsplash.com/photo-1772758632439-bf8e77124b6f?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NHx8c3RvbmUlMjBvdmVuJTIwYnJlYWQlMjBiYWtpbmclMjBydXN0aWN8ZW58MXwwfHx8MTc5MzAxMjM0N3ww&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Pans coent-se a dins d'un forn de pedra" width="1800" height="1200" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap hero-content">
+      <h1 id="hero-title" class="rise" style="--i:0">Pa de forn de pedra, des de 1932</h1>
+      <p class="hero-text rise" style="--i:1">Forn de pa al carrer del Camp de la Vila, al Pont de Suert. Obrim de dimarts a diumenge al matí.</p>
+      <p class="status rise" style="--i:2" data-status aria-live="polite">Dimarts a diumenge, 8:30 - 14:00. Dilluns, tancat.</p>
+      <div class="hero-actions rise" style="--i:3">
+        <a class="btn" href="tel:+34973690259">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          Truca'ns
+        </a>
+        <a class="link" href="#horari">Consulta l'horari</a>
+      </div>
+      <p class="rating rise" style="--i:4">4,5 de 5 a Google, amb 141 ressenyes</p>
+    </div>
+  </section>
+
+  <section class="section" id="pa" aria-labelledby="pa-title">
+    <div class="wrap">
+      <div class="menu" data-reveal="fade">
+        <div class="menu-inner">
+          <header class="menu-head">
+            <h2 id="pa-title" class="h2">Els pans de la casa</h2>
+            <p>Tot surt del mateix forn de sòl de pedra. Pans clàssics i de farina ecològica, i coques.</p>
+          </header>
+
+          <div class="menu-cols">
+            <div class="menu-group">
+              <h3>El pa</h3>
+              <ul class="menu-list">
+                <li>
+                  <div class="item-row"><span class="item-name">Pa de pagès</span><span class="leader" aria-hidden="true"></span><span class="item-tag">forn de pedra</span></div>
+                  <p class="item-desc">La peça de tota la vida, cuita directament sobre la pedra.</p>
+                </li>
+                <li>
+                  <div class="item-row"><span class="item-name">Pa de farina ecològica</span><span class="leader" aria-hidden="true"></span><span class="item-tag">ecològic</span></div>
+                  <p class="item-desc">Pans fets amb farina ecològica, per a qui la busca expressament.</p>
+                </li>
+                <li>
+                  <div class="item-row"><span class="item-name">Pans de sempre</span><span class="leader" aria-hidden="true"></span><span class="item-tag">cada matí</span></div>
+                  <p class="item-desc">Barres i peces clàssiques per a la taula de cada dia.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu-group">
+              <h3>Coques</h3>
+              <ul class="menu-list">
+                <li>
+                  <div class="item-row"><span class="item-name">Coques</span><span class="leader" aria-hidden="true"></span><span class="item-tag">del forn</span></div>
+                  <p class="item-desc">Per esmorzar, per a la sobretaula o per portar a una festa.</p>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <p class="award">
+            <strong>Millor Pa de Pagès de Catalunya 2018</strong>
+            <span>Premi guanyat pel Forn Codina de Vilaller</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="obrador" aria-labelledby="obrador-title" style="padding-top:0">
+    <div class="wrap strip-head" data-reveal>
+      <h2 id="obrador-title" class="h2">Del sòl de pedra al taulell</h2>
+      <p>Pastar, coure i posar el pa a la vitrina. L'ofici de cada dia, a l'Alta Ribagorça.</p>
+    </div>
+    <div class="strip" tabindex="0" role="region" aria-label="Fotografies del forn i del pa">
+      <figure>
+        <img data-slot="galeria" src="https://images.unsplash.com/photo-1591374781716-ee4dd5616150?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Mnx8YXJ0aXNhbiUyMHNvdXJkb3VnaCUyMGxvYXZlcyUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDF8MHx8fDE3OTMwMTIzNDZ8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Pa rodó de crosta torrada sobre un plat fosc" width="1800" height="1200" loading="lazy" decoding="async">
+      </figure>
+      <figure>
+        <img data-slot="galeria" src="https://images.unsplash.com/photo-1513844316321-dd2466411c4c?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NXx8YmFrZXIlMjBoYW5kcyUyMGZsb3VyJTIwa25lYWRpbmclMjBkb3VnaHxlbnwxfDB8fHwxNzkzMDEyMzQ3fDA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Mans pastant la massa sobre el taulell enfarinat" width="1800" height="1200" loading="lazy" decoding="async">
+      </figure>
+      <figure>
+        <img data-slot="galeria" src="https://images.unsplash.com/photo-1769424052131-9044fece031e?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8OHx8YXJ0aXNhbiUyMHNvdXJkb3VnaCUyMGxvYXZlcyUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDF8MHx8fDE3OTMwMTIzNDZ8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Pa rodó amb llavors negres per sobre" width="1800" height="1350" loading="lazy" decoding="async">
+      </figure>
+      <figure>
+        <img data-slot="galeria" src="https://images.unsplash.com/photo-1772758632872-d958f5f6ee46?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NHx8YmFrZXJ5JTIwY291bnRlciUyMGZyZXNoJTIwYnJlYWQlMjBtb3JuaW5nJTIwbGlnaHR8ZW58MXwwfHx8MTc5MzAxMjM0OHww&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Forner col·locant pa acabat de fer a la vitrina" width="1800" height="1200" loading="lazy" decoding="async">
+      </figure>
+      <figure>
+        <img data-slot="galeria" src="https://images.unsplash.com/photo-1606265698533-c17fc6003934?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8MXx8c3RvbmUlMjBvdmVuJTIwYnJlYWQlMjBiYWtpbmclMjBydXN0aWN8ZW58MXwwfHx8MTc5MzAxMjM0N3ww&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Pa de crosta marró sobre una safata de fusta" width="1800" height="1200" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="historia" aria-labelledby="historia-title" style="padding-top:0">
+    <div class="wrap story">
+      <div class="story-text" data-reveal>
+        <h2 id="historia-title" class="h2">Un forn de pa artesà des de 1932</h2>
+        <p>Codina és un forn de pa artesà des de 1932. Hi fem una gran varietat de pans en un forn de sòl de pedra, els clàssics i els de farina ecològica. Servim les famílies del poble, l'hostaleria i els supermercats.</p>
+        <dl class="facts">
+          <div><dt>1932</dt><dd>Forn de pa artesà des d'aleshores</dd></div>
+          <div><dt>4 forns</dt><dd>Vilaller, el Pont de Suert, Pla de l'Ermita i Vielha</dd></div>
+          <div><dt>2018</dt><dd>Millor Pa de Pagès de Catalunya, al forn de Vilaller</dd></div>
+        </dl>
+      </div>
+      <figure class="story-media" data-reveal="fade">
+        <img src="https://images.unsplash.com/photo-1772758631686-5e8997c9e45d?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NXx8c3RvbmUlMjBvdmVuJTIwYnJlYWQlMjBiYWtpbmclMjBydXN0aWN8ZW58MXwwfHx8MTc5MzAxMjM0N3ww&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop" alt="Pans a dins d'un forn rústic de pedra, a tocar del foc" width="1800" height="1200" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section orders" id="encarrecs" aria-labelledby="encarrecs-title">
+    <div class="wrap">
+      <div class="orders-main" data-reveal>
+        <h2 id="encarrecs-title" class="h2">Per a una festa, encarrega-ho per telèfon</h2>
+        <p>Pa i coques per a celebracions. Truca a la botiga, digues què necessites i quin dia vindràs a buscar-ho.</p>
+        <a class="phone-big" href="tel:+34973690259" aria-label="Trucar al 973 69 02 59">973 69 02 59</a>
+        <div>
+          <a class="btn" href="tel:+34973690259">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Truca'ns
+          </a>
+        </div>
+      </div>
+      <div class="orders-cols">
+        <div>
+          <h3>Per a famílies i celebracions</h3>
+          <p>Avisa amb temps per a les dates de més feina. A la botiga et diem quan ho pots passar a buscar.</p>
+        </div>
+        <div>
+          <h3>Per a restaurants, bars i botigues</h3>
+          <p>Servim pa a l'hostaleria i als supermercats. Truca'ns i t'expliquem com fer la comanda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="horari" aria-labelledby="horari-title">
+    <div class="wrap visit">
+      <div data-reveal>
+        <h2 id="horari-title" class="h2">Horari i com trobar-nos</h2>
+        <p class="status" data-status aria-live="polite">Dimarts a diumenge, 8:30 - 14:00. Dilluns, tancat.</p>
+        <table class="hours">
+          <caption>Només obrim al matí.</caption>
+          <tbody>
+            <tr data-day="1" class="closed"><th scope="row">Dilluns</th><td>Tancat</td></tr>
+            <tr data-day="2"><th scope="row">Dimarts</th><td>8:30 - 14:00</td></tr>
+            <tr data-day="3"><th scope="row">Dimecres</th><td>8:30 - 14:00</td></tr>
+            <tr data-day="4"><th scope="row">Dijous</th><td>8:30 - 14:00</td></tr>
+            <tr data-day="5"><th scope="row">Divendres</th><td>8:30 - 14:00</td></tr>
+            <tr data-day="6"><th scope="row">Dissabte</th><td>8:30 - 14:00</td></tr>
+            <tr data-day="0"><th scope="row">Diumenge</th><td>8:30 - 14:00</td></tr>
+          </tbody>
+        </table>
+        <address class="address">
+          <strong>Forn Codina El Pont De Suert</strong>
+          Carrer del Camp de la Vila, 22<br>
+          25520 El Pont de Suert, Lleida<br>
+          <a href="tel:+34973690259">973 69 02 59</a>
+        </address>
+        <div class="visit-actions">
+          <a class="btn" href="tel:+34973690259">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Truca'ns
+          </a>
+          <a class="link" href="https://maps.google.com/?cid=7440591488419019941&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Com arribar-hi</a>
+        </div>
+      </div>
+      <div class="map" data-reveal="fade">
+        <iframe src="https://www.google.com/maps?q=Forn%20Codina%20El%20Pont%20De%20Suert%2C%20Carrer%20del%20Camp%20de%20la%20Vila%2C%2022%2C%2025520%20El%20Pont%20de%20Suert%2C%20Lleida&output=embed" loading="lazy" title="Mapa del Forn Codina al Pont de Suert" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Forn Codina</p>
+        <p style="margin-top:1rem">Forn de pa al Pont de Suert. També tenim forn a Vilaller, Pla de l'Ermita i Vielha.</p>
+      </div>
+      <div>
+        <p>Carrer del Camp de la Vila, 22, 25520 El Pont de Suert</p>
+        <p><a href="tel:+34973690259">973 69 02 59</a></p>
+        <p>Dimarts a diumenge, 8:30 - 14:00</p>
+      </div>
+    </div>
+    <p id="credits-fotos">Fotografies de <a href="https://unsplash.com/@yasinonus?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Yasin Onus</a>, <a href="https://unsplash.com/@uniqueton?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Anton</a>, <a href="https://unsplash.com/@victorrdez?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Victor Rodríguez Iglesias</a>, <a href="https://unsplash.com/@imoflow_me?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Mila</a> i <a href="https://unsplash.com/@zerotake?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">zero take</a> a <a href="https://unsplash.com/?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+34973690259">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Truca'ns
+  </a>
+</div>
+
+<script>
+(function(){
+  var OPEN = 8 * 60 + 30, CLOSE = 14 * 60;
+  var NAMES = ['diumenge','dilluns','dimarts','dimecres','dijous','divendres','dissabte'];
+  function isOpenDay(d){ return d !== 1; }
+
+  function statusHTML(){
+    var now = new Date();
+    var d = now.getDay();
+    var m = now.getHours() * 60 + now.getMinutes();
+    if (isOpenDay(d) && m >= OPEN && m < CLOSE) {
+      return '<span class="open">Obert ara.</span> Tanquem a les 14:00.';
+    }
+    if (isOpenDay(d) && m < OPEN) {
+      return 'Ara tancat. Avui obrim de 8:30 a 14:00.';
+    }
+    var add = 1;
+    while (!isOpenDay((d + add) % 7)) add++;
+    var when = add === 1 ? 'demà' : NAMES[(d + add) % 7];
+    return 'Ara tancat. Obrim ' + when + ' a les 8:30.';
+  }
+
+  try {
+    var html = statusHTML();
+    document.querySelectorAll('[data-status]').forEach(function(el){ el.innerHTML = html; });
+    var row = document.querySelector('.hours tr[data-day="' + new Date().getDay() + '"]');
+    if (row) {
+      row.classList.add('is-today');
+      var tag = document.createElement('span');
+      tag.className = 'today-tag';
+      tag.textContent = 'avui';
+      row.querySelector('th').appendChild(tag);
+    }
+  } catch (e) {}
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('[data-reveal]');
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    items.forEach(function(el){
+      el.classList.add('reveal');
+      if (el.getAttribute('data-reveal') === 'fade') el.classList.add('is-fade');
+      io.observe(el);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
