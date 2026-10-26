@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Germans Lorenzo Ismael SL, forn i pastisseria al Pont de Suert</title>
+<meta name="description" content="Forn de pa i pastisseria a l'Avinguda de Victoriano Muñoz, 28, del Pont de Suert. Obrim set dies a la setmana. Truca'ns al 973 69 02 50.">
+<meta name="theme-color" content="#121412">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --bg:#121412;
+  --surface:#1B1E1B;
+  --surface-2:#232723;
+  --text:#EDEBE4;
+  --muted:#A3A69E;
+  --line:#343833;
+  --accent:#C98A3D;
+  --on-accent:#121412;
+  --r:4px;
+  --serif:"DM Serif Display", Georgia, serif;
+  --sans:"Instrument Sans", system-ui, sans-serif;
+  --space:clamp(72px, 10vw, 140px);
+  --pad:20px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --img-filter:saturate(.92) contrast(1.03);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+  accent-color:var(--accent);
+  padding-bottom:calc(76px + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:var(--on-accent)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--r)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;line-height:1.05}
+h2{font-size:clamp(2.1rem, 4.4vw, 3.6rem);letter-spacing:-0.02em}
+h3{font-size:1.5rem;letter-spacing:-0.01em}
+p{margin:0;text-wrap:pretty;max-width:62ch}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:var(--pad)}
+section[id]{scroll-margin-top:72px}
+.muted{color:var(--muted)}
+
+/* Botons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  min-height:48px;padding:0 1.4em;border-radius:var(--r);
+  background:var(--accent);color:var(--on-accent);
+  font:600 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;
+  border:1px solid var(--accent);
+  transition:transform 160ms var(--ease), background-color 200ms ease;
+}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--ghost{background:transparent;color:var(--text);border-color:var(--line)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:#D69A4E}
+  .btn--ghost:hover{background:var(--surface-2);border-color:var(--muted)}
+  .nav a.link:hover{color:var(--text)}
+}
+.icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Capçalera */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(18,20,18,.94);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
+.brand{font-family:var(--serif);font-size:1.25rem;text-decoration:none;white-space:normal;line-height:1.1;min-width:0;letter-spacing:-0.01em}
+.nav-links{display:none;gap:28px;align-items:center}
+.nav a.link{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color 200ms ease;padding:12px 0}
+.nav .btn{min-height:44px;padding:0 1.1em;flex:none}
+
+/* Hero */
+.hero{position:relative;min-height:calc(92svh - 64px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:var(--img-filter)}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top, rgba(18,20,18,.96) 0%, rgba(18,20,18,.82) 34%, rgba(18,20,18,.35) 70%, rgba(18,20,18,.45) 100%);
+}
+.hero-inner{padding-block:120px 40px}
+.hero h1{font-size:clamp(2.7rem, 7vw, 5.8rem);letter-spacing:-0.025em;line-height:1;max-width:13ch}
+.hero-lead{margin-top:22px;font-size:clamp(1.0625rem,1.6vw,1.25rem);color:#DAD7CE;max-width:44ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-meta{
+  display:grid;gap:14px;margin-top:48px;padding-top:20px;border-top:1px solid rgba(237,235,228,.18);
+  font-size:.95rem;color:#CFCCC3;
+}
+.hero-meta > div{display:flex;align-items:center;gap:10px}
+.status strong{font-weight:600;color:var(--text)}
+.status[data-open="true"] strong{color:var(--accent)}
+
+/* Carta: moment de firma */
+.carta-sec{padding-top:var(--space)}
+.carta{
+  max-width:820px;margin-inline:auto;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(36px,6vw,72px) clamp(22px,6vw,76px);
+  position:relative;
+}
+.carta::before{content:"";position:absolute;inset:10px;border:1px solid var(--line);border-radius:2px;pointer-events:none}
+.carta-head{text-align:center;padding-bottom:30px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.carta-head h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+.carta-head p{margin:14px auto 0;color:var(--muted);max-width:40ch}
+.carta-group{padding-top:30px}
+.carta-group h3{font-style:italic;color:var(--accent);font-size:1.35rem;margin-bottom:12px}
+.carta-list{list-style:none;margin:0;padding:0}
+.carta-list li{padding:12px 0}
+.carta-row{display:flex;align-items:baseline;gap:12px}
+.carta-row .name{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.2}
+.carta-row .dots{flex:1;min-width:24px;border-bottom:1px dotted #5E625B;transform:translateY(-.3em)}
+.carta-row .when{font-size:.9rem;color:var(--muted);white-space:nowrap}
+.carta-list .desc{color:var(--muted);font-size:1rem;margin-top:4px;max-width:46ch}
+.carta-foot{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.98rem}
+.carta-foot p{margin-inline:auto}
+.carta-foot a{color:var(--text)}
+
+/* Tira de fotos */
+.strip-sec{padding-top:var(--space)}
+.strip-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.strip-head p{color:var(--muted);max-width:38ch}
+.strip{
+  display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw, 360px);gap:16px;
+  overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;
+  padding-inline:var(--pad);scroll-padding-inline:var(--pad);padding-bottom:12px;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent;
+  list-style:none;margin:0;
+}
+.strip li{scroll-snap-align:start}
+.strip figure{margin:0}
+.frame{overflow:hidden;border-radius:var(--r);background:var(--surface)}
+.frame img{width:100%;height:100%;object-fit:cover;filter:var(--img-filter);transition:transform 700ms var(--ease)}
+.strip .frame{aspect-ratio:4/5}
+.strip figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:12px}
+.strip figcaption span:first-child{font-family:var(--serif);font-size:1.3rem}
+.strip figcaption span:last-child{color:var(--muted);font-size:.92rem;padding-top:4px}
+@media (hover:hover) and (pointer:fine){
+  .frame:hover img{transform:scale(1.04)}
+}
+
+/* Encàrrecs */
+.encarrec-sec{padding-top:var(--space)}
+.encarrec{
+  display:grid;gap:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(28px,5vw,64px);
+}
+.encarrec h2{margin-bottom:18px}
+.encarrec-intro p{color:var(--muted)}
+.dades{margin:30px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.dades li{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dades b{font-weight:600}
+.dades span{color:var(--muted);font-size:1rem}
+.encarrec-call{display:flex;flex-direction:column;justify-content:center;gap:18px;padding-top:8px}
+.encarrec-call .num{
+  font-family:var(--serif);font-size:clamp(2.1rem,5.4vw,4.2rem);letter-spacing:-0.02em;line-height:1;
+  text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap;
+  color:var(--accent);
+}
+.encarrec-call p{color:var(--muted);font-size:1rem;max-width:34ch}
+.encarrec-call .btn{align-self:flex-start}
+
+/* Qui som */
+.qui-sec{padding-top:var(--space)}
+.qui-img{aspect-ratio:4/3;border-radius:var(--r)}
+.qui-body{display:grid;gap:28px;margin-top:40px}
+.qui-body p{font-size:1.125rem;color:#D6D3CA}
+.nota{border-top:1px solid var(--line);padding-top:18px}
+.nota .big{font-family:var(--serif);font-size:clamp(3rem,6vw,4.6rem);line-height:1;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.nota p{color:var(--muted);font-size:1rem;margin-top:8px}
+
+/* Horari i mapa */
+.horari-sec{padding-block:var(--space)}
+.horari-grid{display:grid;gap:44px}
+.horari-sec h2{margin-bottom:16px}
+.horari-sec .status{font-size:1.05rem;margin-bottom:24px;color:#CFCCC3}
+.taula-horari{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.taula-horari th,.taula-horari td{padding:13px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-weight:400}
+.taula-horari th{text-transform:capitalize;padding-right:16px;white-space:nowrap}
+.taula-horari td{text-align:right;color:#D6D3CA}
+.taula-horari td span{display:block}
+.taula-horari tr.is-today th,.taula-horari tr.is-today td{color:var(--accent)}
+.taula-horari tr.is-today th::after{content:" (avui)";color:var(--muted);font-size:.88rem}
+.adreca{margin-top:32px;display:grid;gap:14px}
+.adreca address{font-style:normal;font-size:1.1rem}
+.adreca .row{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--surface)}
+.mapa iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.8)}
+
+/* Peu */
+.site-footer{border-top:1px solid var(--line);padding-block:48px 40px;color:var(--muted);font-size:.95rem}
+.foot-grid{display:grid;gap:20px}
+.foot-name{font-family:var(--serif);font-size:1.6rem;color:var(--text);line-height:1.1}
+.site-footer a{color:var(--text)}
+#credits-fotos{font-size:.85rem;margin-top:28px;max-width:80ch}
+
+/* Barra de trucada mòbil */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(18,20,18,.96);border-top:1px solid var(--line);
+}
+.callbar .btn{width:100%;min-height:52px}
+.callbar .btn span.n{font-weight:500;opacity:.85;font-variant-numeric:tabular-nums}
+
+/* Moviment */
+.js .hero [data-in]{opacity:0;transform:translateY(20px)}
+.js .hero-media img{transform:scale(1.06)}
+.js .hero.is-ready [data-in]{opacity:1;transform:none;transition:opacity 800ms var(--ease), transform 800ms var(--ease);transition-delay:calc(var(--i) * 80ms + 150ms)}
+.js .hero.is-ready .hero-media img{transform:scale(1);transition:transform 1600ms var(--ease)}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity 700ms var(--ease), transform 700ms var(--ease)}
+.js .reveal-clip{clip-path:inset(0 0 100% 0);transition:clip-path 800ms var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal-clip.is-in{clip-path:inset(0 0 0 0)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .hero [data-in],.js .reveal{opacity:1;transform:none}
+  .js .hero-media img{transform:none}
+  .js .reveal-clip{clip-path:none}
+}
+
+@media (min-width:768px){
+  :root{--pad:40px}
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .nav-links{display:flex}
+  .hero-inner{padding-block:160px 48px}
+  .hero-meta{grid-template-columns:auto auto 1fr;gap:36px}
+  .hero-meta > div:last-child{justify-self:end}
+  .encarrec{grid-template-columns:1.25fr 1fr;gap:64px}
+  .encarrec-call{border-left:1px solid var(--line);padding-left:56px;padding-top:0}
+  .qui-img{aspect-ratio:21/9}
+  .qui-body{grid-template-columns:1fr 1.4fr .8fr;gap:48px;align-items:start}
+  .nota{border-top:0;border-left:1px solid var(--line);padding:0 0 0 28px}
+  .horari-grid{grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+  .mapa{aspect-ratio:auto;height:100%;min-height:520px}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr;align-items:start}
+  .strip{grid-auto-columns:340px;padding-inline:max(var(--pad), calc((100vw - 1200px) / 2 + var(--pad)))}
+}
+</style>
+</head>
+<body>
+<div class="jd-demo" role="note"><style>.jd-demo{position:relative;z-index:2147483000;background:#141414;color:#ededed;font:500 12.5px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:8px 16px;padding-top:calc(8px + env(safe-area-inset-top,0px))}.jd-demo a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}</style>Proposta de web creada per Jaume per a Germans Lorenzo Ismael SL. No és la web oficial del negoci. <a href="mailto:demojaume@gmail.com">Contacte</a></div>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Navegació principal">
+    <a class="brand" href="#inici">Germans Lorenzo Ismael</a>
+    <div class="nav-links">
+      <a class="link" href="#taulell">El taulell</a>
+      <a class="link" href="#encarrecs">Encàrrecs</a>
+      <a class="link" href="#horari">Horari</a>
+    </div>
+    <a class="btn" href="tel:+34973690250">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      Truca'ns
+    </a>
+  </nav>
+</header>
+
+<main id="inici">
+
+  <section class="hero" aria-labelledby="titol-hero">
+    <div class="hero-media">
+      <img data-slot="hero" fetchpriority="high" width="1800" height="1200"
+        src="https://images.unsplash.com/photo-1567891026259-c133718572a4?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NHx8Y3JvaXNzYW50cyUyMGFuZCUyMHBhc3RyaWVzJTIwd2FybSUyMGxpZ2h0fGVufDF8MHx8fDE3OTMwMTIzNDl8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+        alt="Pans de crosta daurada fotografiats de prop, amb el fons desenfocat">
+    </div>
+    <div class="hero-inner wrap">
+      <h1 id="titol-hero" data-in style="--i:0">Pa i pastissos, set dies, al Pont de Suert</h1>
+      <p class="hero-lead" data-in style="--i:1">Forn i pastisseria a l'Avinguda de Victoriano Muñoz. De dilluns a dissabte, matí i tarda. Diumenge, al matí.</p>
+      <div class="hero-actions" data-in style="--i:2">
+        <a class="btn" href="tel:+34973690250">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          Truca'ns
+        </a>
+        <a class="btn btn--ghost" href="#taulell">Què hi ha al taulell</a>
+      </div>
+      <div class="hero-meta" data-in style="--i:3">
+        <div class="status" data-status>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span><strong>Horari</strong> 8:30 - 14:00 i 17:00 - 20:00</span>
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span>Av. de Victoriano Muñoz, 28</span>
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>
+          <span>4,4 a Google, amb 131 ressenyes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carta-sec" id="taulell" aria-labelledby="titol-carta">
+    <div class="wrap">
+      <div class="carta reveal">
+        <header class="carta-head">
+          <h2 id="titol-carta">El nostre taulell</h2>
+          <p>El que trobaràs cada dia a la botiga i el que et preparem si ens ho demanes.</p>
+        </header>
+
+        <div class="carta-group">
+          <h3>Cada dia</h3>
+          <ul class="carta-list">
+            <li>
+              <div class="carta-row"><span class="name">Pa</span><span class="dots" aria-hidden="true"></span><span class="when">matí i tarda</span></div>
+              <p class="desc">Barres i pans de diferents mides, per a l'esmorzar, el dinar i el sopar.</p>
+            </li>
+            <li>
+              <div class="carta-row"><span class="name">Brioixeria</span><span class="dots" aria-hidden="true"></span><span class="when">del matí</span></div>
+              <p class="desc">Croissants i peces dolces per acompanyar el cafè.</p>
+            </li>
+            <li>
+              <div class="carta-row"><span class="name">Pastisseria</span><span class="dots" aria-hidden="true"></span><span class="when">a la vitrina</span></div>
+              <p class="desc">Pastes i pastissos per a les postres o per portar quan et conviden.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="carta-group">
+          <h3>Per encàrrec i per temporada</h3>
+          <ul class="carta-list">
+            <li>
+              <div class="carta-row"><span class="name">Pastissos de celebració</span><span class="dots" aria-hidden="true"></span><span class="when">per encàrrec</span></div>
+              <p class="desc">Aniversaris, sants i trobades familiars. Ens dius la data i quantes persones sereu.</p>
+            </li>
+            <li>
+              <div class="carta-row"><span class="name">Safates de pastes</span><span class="dots" aria-hidden="true"></span><span class="when">per encàrrec</span></div>
+              <p class="desc">Per a la sobretaula o per a una visita, preparades per a l'hora que vulguis.</p>
+            </li>
+            <li>
+              <div class="carta-row"><span class="name">Coques i dolços de diada</span><span class="dots" aria-hidden="true"></span><span class="when">segons l'època</span></div>
+              <p class="desc">Dolços de temporada per a cada festa. Encarrega'ls amb temps.</p>
+            </li>
+          </ul>
+        </div>
+
+        <footer class="carta-foot">
+          <p>Vols saber què ha sortit avui del forn? <a href="tel:+34973690250">Truca'ns</a> al 973 69 02 50.</p>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip-sec" aria-labelledby="titol-tira">
+    <div class="wrap strip-head reveal">
+      <h2 id="titol-tira">Del forn a la vitrina</h2>
+      <p>Llisca per veure-ho. Les fotos són orientatives: el taulell canvia cada dia.</p>
+    </div>
+    <ul class="strip" aria-label="Productes del forn">
+      <li>
+        <figure>
+          <div class="frame"><img data-slot="galeria" loading="lazy" decoding="async" width="1800" height="1200"
+            src="https://images.unsplash.com/photo-1620146344904-097a0002d797?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8OHx8Y3JvaXNzYW50cyUyMGFuZCUyMHBhc3RyaWVzJTIwd2FybSUyMGxpZ2h0fGVufDF8MHx8fDE3OTMwMTIzNDl8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            alt="Un pa rodó de crosta fosca sobre un plat de ceràmica marró"></div>
+          <figcaption><span>Pa</span><span>cada dia</span></figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="frame"><img data-slot="galeria" loading="lazy" decoding="async" width="1800" height="1200"
+            src="https://images.unsplash.com/photo-1623334044303-241021148842?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8MXx8Y3JvaXNzYW50cyUyMGFuZCUyMHBhc3RyaWVzJTIwd2FybSUyMGxpZ2h0fGVufDF8MHx8fDE3OTMwMTIzNDl8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            alt="Croissants daurats amuntegats sobre una taula"></div>
+          <figcaption><span>Brioixeria</span><span>del matí</span></figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="frame"><img data-slot="galeria" loading="lazy" decoding="async" width="1800" height="1195"
+            src="https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NXx8Y3JvaXNzYW50cyUyMGFuZCUyMHBhc3RyaWVzJTIwd2FybSUyMGxpZ2h0fGVufDF8MHx8fDE3OTMwMTIzNDl8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            alt="Vitrina plena de pastes i pastissos de diferents tipus"></div>
+          <figcaption><span>Pastisseria</span><span>a la vitrina</span></figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="frame"><img data-slot="galeria" loading="lazy" decoding="async" width="1800" height="1200"
+            src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8Mnx8Y3JvaXNzYW50cyUyMGFuZCUyMHBhc3RyaWVzJTIwd2FybSUyMGxpZ2h0fGVufDF8MHx8fDE3OTMwMTIzNDl8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+            alt="Pastes acabades de coure sobre una safata de forn, vistes de prop"></div>
+          <figcaption><span>Safates de pastes</span><span>per encàrrec</span></figcaption>
+        </figure>
+      </li>
+    </ul>
+  </section>
+
+  <section class="encarrec-sec" id="encarrecs" aria-labelledby="titol-encarrec">
+    <div class="wrap">
+      <div class="encarrec reveal">
+        <div class="encarrec-intro">
+          <h2 id="titol-encarrec">Un pastís per a la data que vulguis</h2>
+          <p>Els encàrrecs els prenem per telèfon. Truca'ns uns dies abans i quedem amb tu el dia i l'hora de recollida.</p>
+          <ul class="dades">
+            <li><b>La data i l'hora</b><span>Quan vens a buscar-lo a la botiga.</span></li>
+            <li><b>Quantes persones sereu</b><span>Així en calculem la mida.</span></li>
+            <li><b>Què us agrada</b><span>Gustos, farcits i si cal posar-hi un nom.</span></li>
+          </ul>
+        </div>
+        <div class="encarrec-call">
+          <a class="num" href="tel:+34973690250">973 69 02 50</a>
+          <p>A les diades, els encàrrecs s'han de fer amb més antelació.</p>
+          <a class="btn" href="tel:+34973690250">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Truca'ns
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="qui-sec" id="qui-som" aria-labelledby="titol-qui">
+    <div class="wrap">
+      <div class="frame qui-img reveal-clip">
+        <img loading="lazy" decoding="async" width="1800" height="1200"
+          src="https://images.unsplash.com/photo-1513844316321-dd2466411c4c?ixid=M3wxMTA5MzA4fDB8MXxzZWFyY2h8NXx8YmFrZXIlMjBoYW5kcyUyMHNoYXBpbmclMjBicmVhZCUyMGRvdWdofGVufDF8MHx8fDE3OTMwMTIzNDh8MA&ixlib=rb-4.1.0&w=1800&q=80&auto=format&fit=crop"
+          alt="Unes mans pasten la massa sobre un taulell enfarinat">
+      </div>
+      <div class="qui-body">
+        <h2 id="titol-qui" class="reveal">El forn de l'avinguda</h2>
+        <p class="reveal">Som Germans Lorenzo Ismael, forn de pa i pastisseria a l'Avinguda de Victoriano Muñoz del Pont de Suert. La guia de Turisme Alta Ribagorça ens té entre els productors de la comarca. Cada dia obrim el taulell amb el que hem pastat i cuit.</p>
+        <div class="nota reveal">
+          <div class="big">4,4</div>
+          <p>de valoració a Google, amb 131 ressenyes de qui ve a comprar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="horari-sec" id="horari" aria-labelledby="titol-horari">
+    <div class="wrap horari-grid">
+      <div class="reveal">
+        <h2 id="titol-horari">Horari i on som</h2>
+        <p class="status" data-status><strong>Obrim</strong> de dilluns a diumenge</p>
+        <table class="taula-horari">
+          <caption class="muted" style="caption-side:bottom;text-align:left;padding-top:12px;font-size:.92rem">Als festius, truca'ns per confirmar l'horari.</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">dilluns</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="2"><th scope="row">dimarts</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="3"><th scope="row">dimecres</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="4"><th scope="row">dijous</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="5"><th scope="row">divendres</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="6"><th scope="row">dissabte</th><td><span>8:30 - 14:00</span><span>17:00 - 20:00</span></td></tr>
+            <tr data-day="0"><th scope="row">diumenge</th><td><span>9:00 - 14:00</span><span class="muted">tarda tancat</span></td></tr>
+          </tbody>
+        </table>
+        <div class="adreca">
+          <address>Avinguda de Victoriano Muñoz, 28<br>25520 El Pont de Suert, Lleida</address>
+          <div class="row">
+            <a class="btn" href="tel:+34973690250">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              Truca'ns
+            </a>
+            <a class="btn btn--ghost" href="https://maps.google.com/?cid=10309625030301990071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+              Com arribar
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mapa reveal">
+        <iframe src="https://www.google.com/maps?q=Germans%20Lorenzo%20Ismael%20SL%2C%20Avinguda%20de%20Victoriano%20Mu%C3%B1oz%2C%2028%2C%2025520%20El%20Pont%20de%20Suert%2C%20Lleida&output=embed" loading="lazy" title="Mapa de Germans Lorenzo Ismael SL al Pont de Suert" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-name">Germans Lorenzo Ismael SL</div>
+        <p style="margin-top:8px">Forn de pa i pastisseria al Pont de Suert.</p>
+      </div>
+      <p>Avinguda de Victoriano Muñoz, 28<br>25520 El Pont de Suert</p>
+      <p><a href="tel:+34973690250">973 69 02 50</a><br>Diumenge obrim al matí</p>
+    </div>
+    <p id="credits-fotos">Fotografies de <a href="https://unsplash.com/@sergich?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Sergio Arze</a>, <a href="https://unsplash.com/@montatip?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">montatip lilitsanong</a>, <a href="https://unsplash.com/@commonboxturtle?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Conor Brown</a>, <a href="https://unsplash.com/@peacecreativestudio?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Peace Creative</a>, <a href="https://unsplash.com/@minkmingle?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Mink Mingle</a> i <a href="https://unsplash.com/@victorrdez?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Victor Rodríguez Iglesias</a> a <a href="https://unsplash.com/?utm_source=webs_demo&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+34973690250">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Truca'ns <span class="n">973 69 02 50</span>
+  </a>
+</div>
+
+<script>
+(function(){
+  // Horari en minuts. 0 = diumenge.
+  var weekday = [[510,840],[1020,1200]];
+  var H = {0:[[540,840]],1:weekday,2:weekday,3:weekday,4:weekday,5:weekday,6:weekday};
+
+  function fmt(m){ return Math.floor(m/60) + ':' + String(m%60).padStart(2,'0'); }
+
+  function estat(now){
+    var d = now.getDay(), m = now.getHours()*60 + now.getMinutes();
+    var trams = H[d];
+    for (var i=0;i<trams.length;i++){
+      if (m >= trams[i][0] && m < trams[i][1]) return {open:true, text:'Tanquem a les ' + fmt(trams[i][1])};
+    }
+    for (var j=0;j<trams.length;j++){
+      if (trams[j][0] > m) return {open:false, text:'Obrim a les ' + fmt(trams[j][0])};
+    }
+    var dema = H[(d+1)%7][0][0];
+    return {open:false, text:'Obrim demà a les ' + fmt(dema)};
+  }
+
+  function pinta(){
+    var now = new Date(), e = estat(now);
+    document.querySelectorAll('[data-status]').forEach(function(el){
+      el.setAttribute('data-open', e.open ? 'true' : 'false');
+      var target = el.querySelector('span') || el;
+      if (target === el) {
+        el.innerHTML = '<strong>' + (e.open ? 'Obert ara.' : 'Ara tancat.') + '</strong> ' + e.text + '.';
+      } else {
+        target.innerHTML = '<strong>' + (e.open ? 'Obert ara.' : 'Ara tancat.') + '</strong> ' + e.text + '.';
+      }
+    });
+    document.querySelectorAll('.taula-horari tr').forEach(function(tr){
+      var avui = Number(tr.getAttribute('data-day')) === now.getDay();
+      tr.classList.toggle('is-today', avui);
+      if (avui) tr.setAttribute('aria-current','date'); else tr.removeAttribute('aria-current');
+    });
+  }
+  pinta();
+  setInterval(pinta, 60000);
+
+  // Entrada de l'hero
+  var hero = document.querySelector('.hero');
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('is-ready'); }); });
+
+  // Aparicions en fer scroll
+  var els = document.querySelectorAll('.reveal, .reveal-clip');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -10% 0px', threshold:0.12});
+  els.forEach(function(el, i){
+    if (el.parentElement && el.parentElement.classList.contains('qui-body')) {
+      el.style.transitionDelay = (Array.prototype.indexOf.call(el.parentElement.children, el) * 90) + 'ms';
+    }
+    io.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
